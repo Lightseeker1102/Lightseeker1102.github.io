@@ -1,0 +1,55 @@
+body {
+    
+    background-image: url('weeknd.jpg.webp');
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+.header{
+    text-align: center;
+    font-size: 2vw;
+    padding: 1vw;
+    font-family: 'Montserrat', sans-serif;
+}
+.image-box {
+    width: 12vw;  /* Adjusted size */
+    height: 12vw; /* Maintain square aspect ratio */
+    padding: 0; 
+    border: none; /* Remove border if not needed */
+    float: left;
+    margin-right: 15px; /* Adds spacing between image and text */
+    border-radius: 10px;
+    overflow: hidden; /* Ensures image stays within the box */
+}
+
+.image-box img {
+    width: 100%; /* Ensures image fills the box */
+    height: 100%;
+    object-fit: cover; /* Keeps aspect ratio while covering the box */
+    display: block;
+    border-radius: 10px; /* Ensures image corners match the container */
+}
+.text-box {
+    text-align: center;
+    padding: 5vw;
+}
+.box {
+    text-align: center;
+    align-items: center; /* Centers text vertically */
+    height: 20%; /* Adjust height dynamically */
+    width: 90vw; /* Adjusted width */
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow: hidden; 
+    padding: 2vw;
+    border-radius: 10px;
+    margin: 5vw auto;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-weight: bold;
+    font-size: 1.5vw;
+}
