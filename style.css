@@ -1,69 +1,107 @@
+body {
+    background-image: linear-gradient(to bottom, #212F3C, #3D3059);
+    background: #6a00ff;
+    background: radial-gradient(circle, rgba(106, 0, 255, 1) 21%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 1) 77%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 20px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Add these styles to your style.css */
+.columns-container {
+    width: 90vw;
+    height: 70vh;
+    border: solid 2px transparent;
+    border-radius: 30px;
+    padding: 20px;
+    display: none;
+    overflow: hidden;
+    margin-top: 20px;
+}
 
-#artistInput{
+.columns-container.visible {
+    display: flex;
+    border-color: #6A00FF;
+}
+
+.columns {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+}
+
+#artistinfo {
+    width: 30%;
+    padding: 20px;
+    overflow-y: auto; /* Make it scrollable */
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#artistalbums {
+    width: 70%;
+    padding: 20px;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
+
+/* Hide scrollbars but keep functionality */
+#artistinfo::-webkit-scrollbar,
+#artistalbums::-webkit-scrollbar {
+    display: none;
+}
+
+#artistinfo,
+#artistalbums {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.artist-header img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.album-card {
+    margin-bottom: 30px;
+}
+
+.loading {
+    display: none;
+    margin: 20px;
+}
+
+.error {
+    display: none;
+    color: #ff6b6b;
+    margin: 20px;
+}
+#artistInput {
     width: 300px;
     padding: 10px;
     border: 1px solid #9900ff;
     border-radius: 5px;
     background-color: #000000;
     color: white;
+    margin-bottom: 20px;
 }
 
-#artistnamesubmit{
+#artistnamesubmit {
     padding: 10px 20px;
     background-color: #000000;
     color: white;
     border: solid #6A00FF;
     border-radius: 30px;
     cursor: pointer;
-}
-
-body {
-    background: radial-gradient(circle, rgba(106, 0, 255, 1) 21%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 1) 77%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    overflow: hidden; /* prevents body scroll */
-    height: 100vh; /* full screen */
-}
-
-.columns {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* center vertically */
-    gap: 20px;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-#artistinfo {
-    width: 300px;
-    max-height: 90vh;
-    overflow: hidden; /* stays static */
-    padding: 20px;
-    border: solid #6A00FF;
-    border-radius: 30px;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-#artistalbums {
-    width: 500px;
-    max-height: 90vh;
-    overflow-y: auto; /* scrolls internally */
-    padding: 20px;
-    border: solid #9900ff;
-    border-radius: 30px;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-/* Style scrollbar (optional, for aesthetics) */
-#artistalbums::-webkit-scrollbar {
-    width: 8px;
-}
-#artistalbums::-webkit-scrollbar-thumb {
-    background-color: #6A00FF;
-    border-radius: 10px;
+    margin-bottom: 20px;
 }
